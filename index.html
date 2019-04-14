@@ -4,39 +4,90 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, inital-scale=1.0">
-        <meta name="decription" content="Tomo Kobayashi Buchberg's homepage">
+        <meta name="decription" content="tomokb.github.io">
 
-        <link rel="stylesheet" href="stylesheets/main.css" type=text/css>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono">
-
-        <title>Welcome to Tomo Buchberg's Homepage!</title>
+        <link rel="stylesheet" href="stylesheets/main.css" >
+        <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans" rel="stylesheet">
+        <title>Welcome to Tomo's Homepage</title>
     </head>
 
     <body>
-        <!--HEADER-->
-        <div id="header_wrap" class="outer">
-            <header class="inner">
-                <a id="forkme_banner" href="https://github.com/tomokb/tomokb.github.io">View on Github</a>
-
-                <h2 id="project_tagline">I'll be using this site to showcase my work.</h2>
-
-            </header>
+    <!-- container for all content-->
+    <div id="container">
+        <div id="menu">
+                <a href="#homepage">Home</a>
+                <a href="#about">About</a>
+                <a href="#projects">Work in Progress</a>
+                <!--<a href="#blog">Blog</a> -->
+                <a href="#contact">Contact</a>
         </div>
 
+        <!--HEADER-->
+        <header>
+            <h1 id="homepage">Welcome to my Homepage!</h1>
+            <a id="github_banner" href="https://github.com/tomokb/tomokb.github.io">View on Github</a>
+        </header>
+
+        <!-- div id="scroller" data-scrollbar="true" tabindex="1" style="overflow:hidden; outline: none;" -->
         <!--MAIN CONTENT-->
-        
+        <section id="about">
+            <h2>My name is Tomo Kobayashi Buchberg.</h2>
+            <br>
+            <div class="intro">
+                <h3>Here are some things about me: </h3>
+                <div id="bio">
+                    <li>I'm an aspiring programmer.</li>
+                    <li>I'm currently studying <a href="#projects_JavaScript">JavaScript</a>, <a href="#projects_C++">C++</a>, <a href="#projects_Java">Java</a>, and <a href="#projects_Swift">Swift.</a></li>
+                    <li>I'm a student at Santa Monica College.</li>
+                    <li>My goal is to publish my first iOS application sometime this summer.</li>
+                    <li>I'm looking for an internship ;)</li>
+                </div>
+            </div>
+        </section>
 
+        <div id="main_content">
 
+            <div id="projects">
+                <section id="projects_JavaScript" class="article">
+                    <h2>JavaScript: </h2>
+                    <p></p>
+                    <p></p>
+                </section>
 
+                <section id="projects_C++" class="article">
+                    <h2>C++: </h2>
+                    <p></p>
+                    <p></p>
+                </section>
+
+                <section id="projects_Java" class="article">
+                    <h2>Java: </h2>
+                    <p></p>
+                    <p></p>
+                </section>
+
+                <section id="projects_Swift" class="article">
+                    <h2>Swift: </h2>
+                    <p></p>
+                    <p></p>
+                </section>
+            </div>
+        </div>
 
 
         <!--FOOTER-->
-        <div id="footer_wrap" class="outer">
-            <footer class="inner">
-
-                <p>Contact: tomobuchberg@gmail.com</p>
-            </footer>
-        </div>
+            <!--download resume: -->
+        <footer>
+            <!-- tomobuchberg@gmail.com  <a href="">LinkedIn</a>-->  
+            <div id="contact">
+                <a href="">tomobuchberg@gmail.com</a>
+                <a href="">Linkedin</a>
+            </div>
+            <p>Tomo Kobayashi Buchberg 
+                <script type="text/javascript"> var d = new Date(); document.write(d.getFullYear()); </script>
+            </p>
+        </footer>
+    </div>
     </body>
 </html>
 

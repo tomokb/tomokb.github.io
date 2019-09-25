@@ -5,62 +5,83 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Tomo Buchberg is an aspiring software developer and student. Official homepage. - tomokb.github.io">
-
         <link rel="shortcut icon" href="favicon.ico?v=1">
-
-
         <link rel="stylesheet" href="stylesheets/main.css" >
         <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans" rel="stylesheet">
         <title>Welcome to Tomo's Homepage</title>
     </head>
 
     <body>
-    <!-- container for all content-->
-    <div id="container">
-        <div id="menu">
-                <a href="#homepage">Home</a>
-                <a href="#about">About</a>
-                <a href="#projects">Work in Progress</a>
-                <!--<a href="#blog">Blog</a> -->
-                <a href="#contact">Contact</a>
-        </div>
+        <!-- container for all content-->
+        <div id="container">
 
-        <!--HEADER-->
-        <header>
-            <h1 id="homepage">Hi, my name is Tomo Buchberg.</h1>
-            <a id="github_banner" href="https://github.com/tomokb/tomokb.github.io">View on Github</a>
-        </header>
+            <!--HEADER-->
+            <header>
+                <!--
+                <div class="banner-left">
+                    <div id="profile-icon">
+                        <img alt="Tomo Buchberg @ Github" src="images/raccoon.png" width="50" height="50"/>
+                    </div>
+                    <div id="name" href="https://github.com/tomokb/tomokb.github.io">
+                        <li>Tomo K. Buchberg</li>
+                    </div>
+                    </div id="clear-float">
+        </div> -->
+                <a id="github_banner" href="https://github.com/tomokb/tomokb.github.io">View on Github</a>
+                
+                <!--
+                <ul id="menu">
+                    <li class="menu-tab">
+                        <a href="#">Home</a>
+                    </li>
+                    <li class="menu-tab">
+                        <a href="#about">About</a>
+                    </li>
+                    
+                    <li class="menu-tab">
+                        <a href="#contact">Contact</a>
+                    </li>
+                </ul>
+                -->
+                        <!--<a href="#projects">Work in Progress</a> -->
+                        <!--<a href="#blog">Blog</a> -->
+            </header>
 
-        <!-- div id="scroller" data-scrollbar="true" tabindex="1" style="overflow:hidden; outline: none;" -->
-        <!-- I'll be using this site to showcase some of my work -->
-        <section id="about">
-            <div class="intro">
-                <h3>Here are some things about me: </h3>
-                <div id="bio">
-                    <li>I am a computer science major at CSUN (class of 2021).</li>
-                    <li>I am interested in web and mobile application development.</li>
-                    </br>
-                    <li>I'll be uploading my personal projects to Github in the subsequent months.</li>
+            
+            <div class="main-content">
+                <section class="page-generic">
+                    <section id="intro">
+                        <div id="intro-message">Hi, my name is Tomo Buchberg.</div>
+                        <!--<div id="cursorElement">|</div>-->
+                    </section>
+                </section>
+
+                <section class="page-generic">
+                    <section id="about">
+                        <h3>About:</h3>
+                        <div id="bio">
+                            <li id="item1">B.S. Computer Science at CSUN (class of 2021).</li>
+                            </br>
+                            <li id="item2">Interested in web and mobile application development.</li>
+                            </br>
+                            <li id="item3">I'll be uploading my personal projects here.</li>
+                            </br>
+                        </div>
+                    </section>
+                </section>
+            </div>
+
+            <!--FOOTER-->
+            <footer>
+                <!--
+                <div id="contact">
+                    <a href="">tomobuchberg@gmail.com</a>
                 </div>
-            </div>
-        </section>
-
-        <div id="main_content">
+                -->
+                <p id="copyright">Tomo Kobayashi Buchberg </p>
+            </footer>
         </div>
-
-
-        <!--FOOTER-->
-        <footer>
-            <!-- tomobuchberg@gmail.com  <a href="">LinkedIn</a>-->  
-            <div id="contact">
-                <a href="">tomobuchberg@gmail.com</a>
-                <!--<a href="">Linkedin</a> -->
-            </div>
-            <p>Tomo Kobayashi Buchberg 
-                <script type="text/javascript"> var d = new Date(); document.write(d.getFullYear()); </script>
-            </p>
-        </footer>
-    </div>
     </body>
+    <script src="scripts/main.js"></script>
 </html>
 

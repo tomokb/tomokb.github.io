@@ -7,6 +7,14 @@ const currentYear = currentDate.getFullYear();
 const copyrightDate = document.createTextNode(currentYear);
 copyright.appendChild(copyrightDate);
 
+// animate #about
+const about = document.querySelector('#about');
+// if clicked, or if in #about section:
+about.onclick= function() {
+    // about.classList.add('.dynamicText'); 
+    // after 5 seconds, about.classList.remove(' ');
+};
+
 
 // Typing animation
 function typewriter() {

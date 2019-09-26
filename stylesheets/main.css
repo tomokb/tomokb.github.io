@@ -59,7 +59,6 @@ body {
     font-family: 'IBM Plex Sans', sans-serif;
     background: #000;
     color: #fff;
-    /* padding-bottom: 60px; */ /* footer height */
 }
 
 .page-generic {
@@ -93,28 +92,74 @@ a:hover {
     opacity: 1;
 }
 
-.main-content {
+.nav {
+    height: 100%;
+    /*float: right; */
+    z-index: 1;
+    position: fixed;
+    right: 0;
+    overflow-x: hidden;
+    padding-top: 200px;
 
+}
+
+.nav a {
+    display: block;
+    padding: 0px 20px 0px 0px;
+    height: 15vh;
+    opacity: .83;
+}
+
+.nav a:hover {
+    text-shadow: 0 0 7px #fff;
+    opacity: 1;
+}
+
+.main-content {
+    position: relative;
+}
+#container {
 }
 
 /* -----     ----- */
-#profile-icon {
-    float: left;
+
+@media screen and (max-width: 600px) {
+    header {
+    }
+
+    .nav {
+        top: 0;
+        left: 0;
+        float: left;
+    }
+    .nav a {
+        display: inline-block;
+        padding; 5px 20px 0px 20px;
+
+    }
+
+    #github_banner {
+        
+
+    }
 }
 
-#name {
-    float: right;
+#github_banner {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 10px 50px 10px 20px;
+    color: #fff;
+    opacity: 0.93;
+    background: url("../images/profile-icon.png") no-repeat 95% 50%;
+    font-weight: bold;
+    font-size: 14px;
 }
 
 
-.banner-left > *{
-    display: inline;
-    margin: 0;
-    top: 0;
-}
-
-#name {
-    list-style-type: none;
+#github_banner:hover {
+    text-shadow: 0 0 7px #fff;
+    opacity: 1;
 }
 
 #intro > * {
@@ -161,140 +206,9 @@ a:hover {
 #bio {
     overflow: hidden;
     text-align: center;
-}
-
-/*
-#container {
-    min-height: 100%;
-    position: relative;
-    font-weight: 400;
-} */
-
-
-
-#menu {
-    position: fixed;
-    top: 100px; 
-    right: 0;
+    list-style: none;
 }
 
 
-#menu .menu-tab {
-    display: block;
-    padding: 30px 0 30px 0; 
-}
-
-@media screen and (max-width: 600px) {
-    #menu {
-        float: none;
-        width: 100%;
-        /*max-width: 600px; */
-        margin: 0 auto;
-        top: 0;
-        position: relative;
-        padding: 0;
-        background: pink;
-        text-align: center; 
-    }
-    #menu .menu-tab {
-        display: inline-block;
-        padding: 0 15px;
-        border: none;
-    }
-    .banner-left {
-
-    }
-}
-
-
-
-/* #menu a {
-    padding: 40px 0px 40px 25px;
-    text-decoration: none;
-    font-size: 16px;
-    color: #fff;
-    display: block;
-    opacity: .93;
-} */
-
-
-#menu ul {
-    height: 300px;
-    background-color: #212121;
-    margin-top: 100px;
-    text-align: center;
-    padding: 20px 0 20px 0;
-    float: right;
-}
-#menu li {
-    height: 15%;
-    padding: 10px;
-    margin: 0 auto;
-    display: inline-block;
-} 
-
-
-#github_banner {
-    position: absolute;
-    top: 0;
-    right: 0px;
-    padding: 10px 50px 10px 20px;
-    color: #fff;
-    opacity: 0.93;
-    background: url("../images/blacktocat.png") no-repeat 95% 50%;
-    font-weight: bold;
-    font-size: 14px;
-    /* box-shadow: 0 0 10px rgba(0,0,0,0.5); */
-    /*border-bottom-left-radius: 2px;
-    border-bottom-right-radius: 2px; */
-}
-
-
-#github_banner:hover {
-    text-shadow: 0 0 7px #fff;
-    opacity: 1;
-}
-
-
-/*
-#about{
-    margin: 0 auto;
-    padding-bottom: 150px;
-    padding-top: 200px;
-    text-align: center;
-}
-
-#about h2 {
-    text-align: center;
-    font-size: 30px;
-}
-
-h3 {
-    padding: 20px;
-}
-
-
-.article {
-    width: 500px; 
-    height: 600px;
-    background: #212121;
-}
-
-
-
-/*
-#bio {
-    margin: auto;
-    list-style: inside; 
-}
-/*display: inline-block;*/
-
-
-
-/*
-footer p {
-    padding: 10px 15px 0px 15px;
-}
-*/
 
 

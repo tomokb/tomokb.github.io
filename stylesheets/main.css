@@ -1,214 +1,83 @@
-/* CSS animations */
-
-#cursorElement{
-    font-size: 2em;
-    animation-name: cursorBlink;
-    animation-duration: 1.2s;
-    animation-iteration-count: infinite;
+/* --- Solarized --- */
+/* Light body text/primary content. */
+/* If Light: emphasized content. If Dark: comments/secondary content. */
+/* Dark background highlights. */
+/* Dark background. */
+/* Dark body text/primary content. */
+/* If Light: comments/secondary content. If Dark: emphasized content. */
+/* Light background highlights. */
+/* Light background. */
+/* Accent tones */
+* {
+  font-family: Menlo, Monaco, "Roboto Mono", monospace;
 }
 
-@keyframes cursorBlink {
-    0% {
-       opacity: 1;
-    }
-    50% {
-       opacity: 0;
-    }
+/* Light Theme */
+.light-theme .background {
+  background-color: #fdf6e3;
+}
+.light-theme .background-highlights {
+  background-color: #eee8d5;
+}
+.light-theme .primary-content {
+  color: #657b83;
+}
+.light-theme .secondary-content {
+  color: #93a1a1;
+}
+.light-theme .emphasized-content {
+  color: #586e75;
 }
 
-@keyframes typing {
-    0% {
-        width: 0%; 
-    }
-    100% {
-        width: 100%;
-    }
+/* Dark Theme */
+.dark-theme .background {
+  background-color: #002b36;
+}
+.dark-theme .background-highlights {
+  background-color: #073642;
+}
+.dark-theme .primary-content {
+  color: #839496;
+}
+.dark-theme .secondary-content {
+  color: #586e75;
+}
+.dark-theme .emphasized-content {
+  color: #93a1a1;
 }
 
-
-@keyframes titleFade {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
+/* ------------------ */
+/* General Styling */
+.attention {
+  color: #dc322f;
 }
 
-@keyframes dynamicText {
-    0% {
-        width: 200%;
-        margin-left: 60%; 
-        opacity: 0;
-
-    }
-    100% {
-        width: 100%;
-        margin-left: 0%;
-        opacity: 1;
-    }
+.important {
+  color: #d33682;
 }
 
-/* ----- Base Rules ----- */
-html, body {
-    margin: 0;
-    height: 100%;
+.declaration {
+  color: #b58900;
 }
 
-body {
-    font-family: 'IBM Plex Sans', sans-serif;
-    background: #000;
-    color: #fff;
+.interesting {
+  color: #cb4b16;
 }
 
-.page-generic {
-    width: 100%; 
-    margin: 0 auto;
-    height: 80vh; 
+.emphasis {
+  color: #6c71c4;
 }
 
-header {
-    height: 20vh; /* 20% viewport height */
+h1 {
+  color: #2aa198;
 }
 
-footer {
-    color: #fff;
-    font-size: 2vw;
-    text-align: center;
-    /*position: absolute;*/
-    bottom: 0;
-    width: 100%;
-    padding: 0;
-    margin: 0 auto;
+h2 {
+  color: #268bd2;
 }
 
-a {
-    color: #fff;
-    text-decoration: none;
+h3 {
+  color: #859900;
 }
 
-a:hover {
-    text-shadow: 0 0 7px #fff;
-    opacity: 1;
-}
-
-.nav {
-    height: 100%;
-    /*float: right; */
-    z-index: 1;
-    position: fixed;
-    right: 0;
-    overflow-x: hidden;
-    padding-top: 200px;
-
-}
-
-.nav a {
-    display: block;
-    padding: 0px 20px 0px 0px;
-    height: 15vh;
-    opacity: .83;
-}
-
-.nav a:hover {
-    text-shadow: 0 0 7px #fff;
-    opacity: 1;
-}
-
-.main-content {
-    position: relative;
-}
-#container {
-}
-
-/* -----     ----- */
-
-@media screen and (max-width: 600px) {
-    header {
-    }
-
-    .nav {
-        top: 0;
-        left: 0;
-        float: left;
-    }
-    .nav a {
-        display: inline-block;
-        padding; 5px 20px 0px 20px;
-
-    }
-
-    #github_banner {
-        
-
-    }
-}
-
-#github_banner {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    padding: 10px 50px 10px 20px;
-    color: #fff;
-    opacity: 0.93;
-    background: url("../images/profile-icon.png") no-repeat 95% 50%;
-    font-weight: bold;
-    font-size: 14px;
-}
-
-
-#github_banner:hover {
-    text-shadow: 0 0 7px #fff;
-    opacity: 1;
-}
-
-#intro > * {
-    /* display: inline;*/
-    margin: 0 auto;
-}
-
-#intro-message {
-    /*animation: typing 4s; */
-    text-align: center;
-    animation: titleFade 1.5s;
-    font-size: 3.5vw;
-}
-
-#about {
-    font-size: 3vw;
-}
-
-#about > h3 {
-    text-align: center;
-    animation: titleFade 1.5s;
-}
-
-
-#item1{
-    animation-name: dynamicText;
-    animation-duration: 1.6s;
-}
-
-#item2{
-    animation-timing-function: ease;
-    animation-name: dynamicText;
-    animation-duration: 1.6s;
-    animation-delay: .3s;
-}
-
-#item3{
-    animation-timing-function: ease;
-    animation-name: dynamicText;
-    animation-duration: 1.6s;
-    animation-delay: .6s;
-}
-
-#bio {
-    overflow: hidden;
-    text-align: center;
-    list-style: none;
-}
-
-
-
-
+/*# sourceMappingURL=main.css.map */

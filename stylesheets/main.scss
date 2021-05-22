@@ -1,0 +1,107 @@
+/* --- Solarized --- */
+
+$base-00: #657b83; /* Light body text/primary content. */
+$base-01: #586e75; /* If Light: emphasized content. If Dark: comments/secondary content. */
+$base-02: #073642; /* Dark background highlights. */
+$base-03: #002b36; /* Dark background. */
+
+$base-0: #839496; /* Dark body text/primary content. */
+$base-1: #93a1a1; /* If Light: comments/secondary content. If Dark: emphasized content. */
+$base-2: #eee8d5; /* Light background highlights. */ 
+$base-3: #fdf6e3; /* Light background. */
+
+/* Accent tones */
+$yellow: #b58900;
+$orange: #cb4b16;
+$red: #dc322f;
+$magenta: #d33682;
+$violet: #6c71c4;
+$blue: #268bd2;
+$cyan: #2aa198;
+$green: #859900;
+
+* {
+    font-family: Menlo, Monaco, "Roboto Mono", monospace;
+}
+
+/* Light Theme */
+.light-theme {
+    .background {
+        background-color: $base-3;
+    }
+
+    .background-highlights {
+        background-color: $base-2;
+    }
+
+    .primary-content {
+        color: $base-00;
+    }
+
+    .secondary-content {
+        color: $base-1;
+    }
+
+    .emphasized-content {
+        color: $base-01;
+    }
+}
+
+/* Dark Theme */ 
+.dark-theme {
+    .background {
+        background-color: $base-03;
+    }
+
+    .background-highlights {
+        background-color: $base-02
+    }
+
+    .primary-content {
+        color: $base-0;
+    }
+
+    .secondary-content {
+        color: $base-01;
+    }
+
+    .emphasized-content {
+        color: $base-1;
+    }
+}
+
+/* ------------------ */
+
+/* General Styling */
+
+.attention {
+    color: $red;
+}
+
+.important {
+    color: $magenta; 
+}
+
+.declaration {
+    color: $yellow;
+}
+
+.interesting {
+    color: $orange;
+}
+
+.emphasis {
+    color: $violet;
+}
+
+h1 {
+    color: $cyan;
+}
+
+h2 {
+    color: $blue;
+}
+
+h3 {
+    color: $green;
+}

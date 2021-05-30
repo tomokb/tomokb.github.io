@@ -4,61 +4,76 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Tomo Buchberg is an aspiring software developer and student. Official homepage. - tomokb.github.io">
+        <meta name="description" content="Tomo Buchberg's Official Homepage. - tomokb.github.io">
         <link rel="shortcut icon" href="favicon.ico?v=1">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">        
         <link rel="stylesheet" href="stylesheets/main.css" >
-        <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans" rel="stylesheet">
-        <title>Welcome to Tomo's Homepage</title>
+        <title>Tomo's Homepage</title>
     </head>
 
-    <body>
-        <!-- container for all content-->
-        <div id="container">
+    <body class="light-theme background">
+        <section id="tabs" class="background-highlights">
+            <a href="#" class="tab">Home</a>
+            <a href="#about" class="tab">About</a>
+            <a href="#projects" class="tab">Projects</a>
+            <a href="#contact" class="tab">Contact</a>
+        </section>
 
-            <!--HEADER-->
-            <header>
-                <a id="github_banner" href="https://github.com/tomokb/tomokb.github.io">View on Github</a>
-            </header>
+        <section id="sidebar" class="background-highlights">
+            <button type="button" id="theme-toggle" class="button grow">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-sun-fill" viewBox="0 0 16 16">
+                    <title>change theme</title>
+                    <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+                </svg>
+            </button>
+            <button type="button" id="language" class="button grow">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-translate" viewBox="0 0 16 16">
+                    <title>change language</title>
+                    <path d="M4.545 6.714 4.11 8H3l1.862-5h1.284L8 8H6.833l-.435-1.286H4.545zm1.634-.736L5.5 3.956h-.049l-.679 2.022H6.18z"/>
+                    <path d="M0 2a2 2 0 0 1 2-2h7a2 2 0 0 1 2 2v3h3a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-3H2a2 2 0 0 1-2-2V2zm2-1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h7a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H2zm7.138 9.995c.193.301.402.583.63.846-.748.575-1.673 1.001-2.768 1.292.178.217.451.635.555.867 1.125-.359 2.08-.844 2.886-1.494.777.665 1.739 1.165 2.93 1.472.133-.254.414-.673.629-.89-1.125-.253-2.057-.694-2.82-1.284.681-.747 1.222-1.651 1.621-2.757H14V8h-3v1.047h.765c-.318.844-.74 1.546-1.272 2.13a6.066 6.066 0 0 1-.415-.492 1.988 1.988 0 0 1-.94.31z"/>
+                </svg>
+            </button>
 
-            <div class="nav">
-                    <a href="#">Home</a>
-                    <a href="#about">About</a>
-            </div>
+            <form id="goto-source" action="https://github.com/tomokb/tomokb.github.io">
+                <button type="submit" class="button grow" value="Go to source code">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-code-slash" viewBox="0 0 16 16">
+                        <title>go to source code</title>
+                        <path d="M10.478 1.647a.5.5 0 1 0-.956-.294l-4 13a.5.5 0 0 0 .956.294l4-13zM4.854 4.146a.5.5 0 0 1 0 .708L1.707 8l3.147 3.146a.5.5 0 0 1-.708.708l-3.5-3.5a.5.5 0 0 1 0-.708l3.5-3.5a.5.5 0 0 1 .708 0zm6.292 0a.5.5 0 0 0 0 .708L14.293 8l-3.147 3.146a.5.5 0 0 0 .708.708l3.5-3.5a.5.5 0 0 0 0-.708l-3.5-3.5a.5.5 0 0 0-.708 0z"/>
+                    </svg>
+                </button>
+            </form>
+        </section>
+
+        <main>
+            <h1 class="main-title emphasized-content"><span id="hello">Hello World!</span><br>I'm <span id="my-name">Tomo</span>.</h1>
+            <p class="sub-title emphasized-content">I <span id="love">love </span><span id="love-this" class="background-highlights">web development</span><span id="cursor"></span>.</p> 
             
-            <div class="main-content">
-                <section class="page-generic">
-                    <section id="intro">
-                        <div id="intro-message">Hi, my name is Tomo Buchberg.</div>
-                        <!--<div id="cursorElement">|</div>-->
-                    </section>
-                </section>
+            <section id="about" class="primary-content">
+                <h1>About</h1>
+                <p>I'm currently honing my <span class="keyword-bold">web development</span> skills!</p>
+                <p>In particular, I'm trying to land a job in <span class="keyword-bold">full-stack</span> development <span class="parenthesis">(front-end or back-end roles interest me as well)</span>.</p>
+                <p>I'll be showcasing my progress here in the coming months.</p>
+            </section>
+    
+            <section id="projects" class="primary-content">
+                <h1>Projects</h1>
+            </section>
+    
+            <section id="contact" class="primary-content">
+                <h1>Contact</h1>
+            </section>
+    
+            <!--<section id="share" class="primary-content">
+                <h4>Share</h4> Facebook, twitter, email, etc. 
+            </section>-->
+        </main>
 
-                <section class="page-generic">
-                    <section id="about">
-                        <h3>About:</h3>
-                        <div id="bio">
-                            <li id="item1">B.S. Computer Science at CSUN (class of 2021).</li>
-                            </br>
-                            <li id="item2">Interested in web and mobile application development.</li>
-                            </br>
-                            <li id="item3">I'll be uploading my personal projects here.</li>
-                            </br>
-                        </div>
-                    </section>
-                </section>
-            </div>
-
-            <!--FOOTER-->
-            <footer>
-                <!--
-                <div id="contact">
-                    <a href="">tomobuchberg@gmail.com</a>
-                </div>
-                -->
-                <p id="copyright">Tomo Kobayashi Buchberg </p>
-            </footer>
-        </div>
+        <footer id="footer">
+            <p><span id="year"></span> Tomo Kobayashi Buchberg</p>
+        </footer>
     </body>
     <script src="scripts/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
 </html>
 

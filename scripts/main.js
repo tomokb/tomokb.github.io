@@ -1,66 +1,19 @@
-'use strict';
 
-// Add copyright date 
-const copyright = document.querySelector('#copyright');
+// Theme/mode
+const theme = "light-theme";
+
+const modeButton = document.querySelector("#theme-toggle");
+modeButton.addEventListener("click", function() {
+    if (theme === "light-theme") {
+        document.body.classList.toggle("dark-theme");
+    }
+    if (theme === "dark-theme") {
+        document.body.classList.toggle("light-theme");
+    }
+});
+
+// Year
+const year = document.querySelector('#year'); 
 const currentDate = new Date();
-const currentYear = currentDate.getFullYear();
-const copyrightDate = document.createTextNode(currentYear);
-copyright.appendChild(copyrightDate);
-
-// animate #about
-const about = document.querySelector('#about');
-// if clicked, or if in #about section:
-about.onclick= function() {
-    // about.classList.add('.dynamicText'); 
-    // after 5 seconds, about.classList.remove(' ');
-};
-
-
-// Typing animation
-function typewriter() {
-    // Cursor Animation
-    const introduction = document.querySelector('#introduction');
-    const textCursor = '|';
-    const textCursorNode = document.createTextNode(textCursor);
-    introduction.appendChild(textCursorNode);
-
-
-    let typing = false;
-
-    function animateCursor() {
-        let newDate = new Date();
-        let secondsElapsed = newDate.getSeconds();
-        // interval 0.6 seconds
-
-        if (!typing) {
-            requestAnimationFrame(animateCursor);
-            textCursorNode.style.opacity = 1;
-        }
-
-    }
-
-    function animateTyping() {
-        typing = true;
-        if (!finishedTyping) {
-            typingID = requestAnimationFrame(animateTyping);
-        } else { // finishedTyping 
-            typing = false;
-            //cancelAnimationFrame(typingID);
-        }
-    }
-
-    
-/*
-    for (let i = 0; i < message.length; i++) {
-        let text = document.createTextNode(message[i]);
-        introduction.appendChild(text);
-    }
-    */
-
-
-
-}
-
-// If JS is loaded, browser is compatible
-typewriter();
-// else, default to normal intro text
+const currentYear = document.createTextNode(currentDate.getFullYear());
+year.appendChild(currentYear);

@@ -20,6 +20,18 @@ $blue: #268bd2;
 $cyan: #2aa198;
 $green: #859900;
 
+/* Global variables */
+:root {
+    --yellow: $yellow;
+    --orange: $orange;
+    --red: $red;
+    --magenta: $magenta;
+    --violet: $violet;
+    --blue: $blue;
+    --cyan: $cyan;
+    --green: $green;
+}
+
 /* Reset Styling */
 * {
     vertical-align: baseline;
@@ -116,12 +128,16 @@ html {
 /* ------------------ */
 
 /* Accent Tones */
-h1 {
-    color: $blue;
+header {
+    color: $cyan;
 }
 
 footer {
     color: $yellow;
+}
+
+section h1 {
+    color: $blue;
 }
 
 a {
@@ -133,10 +149,10 @@ a:hover {
 }
 
 .tab {
-    color: $cyan;
+    color: $blue;
 }
 
-.keyword-bold {
+.keyword-emphasis {
     color: $magenta;
 }
 
@@ -146,10 +162,6 @@ a:hover {
 
 #hello {
     color: $green;
-}
-
-#web-dev {
-    color: $violet;
 }
 
 #love {
